@@ -41,6 +41,10 @@ def main():
 
     n = int(input("Digite a quantidade de valores do vetor: "))
     t = int(input("Digite o número de threads: "))
+    if t == 1:
+        print(f"O número de threads deve ser maior que 1")
+        sys.exit(1)
+        
     resto = n%t
     coef = int(n/t)
 
